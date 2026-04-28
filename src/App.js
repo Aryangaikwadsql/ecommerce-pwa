@@ -1,71 +1,101 @@
-import React from "react";
-import "./App.css";
+import './App.css';
 
-import headphones from "./images/headphones.jpg";
-import watch from "./images/watch.jpg";
-import mouse from "./images/mouse.jpg";
+import headphones from './images/headphones.jpg';
+import smartwatch from './images/smartwatch.jpg';
+import shoes from './images/shoes.jpg';
+import backpack from './images/backpack.jpg';
 
 function App() {
   const products = [
     {
       id: 1,
       name: "Wireless Headphones",
-      price: "₹1999",
-      image: headphones
+      price: "₹2,499",
+      image: headphones,
+      category: "Electronics"
     },
     {
       id: 2,
       name: "Smart Watch",
-      price: "₹2999",
-      image: watch
+      price: "₹3,999",
+      image: smartwatch,
+      category: "Wearables"
     },
     {
       id: 3,
-      name: "Gaming Mouse",
-      price: "₹1499",
-      image: mouse
+      name: "Running Shoes",
+      price: "₹1,999",
+      image: shoes,
+      category: "Fashion"
     },
     {
       id: 4,
-      name: "Bluetooth Speaker",
-      price: "₹2499",
-      image: headphones
-    },
-    {
-      id: 5,
-      name: "Laptop Stand",
-      price: "₹999",
-      image: watch
-    },
-    {
-      id: 6,
-      name: "Mechanical Keyboard",
-      price: "₹3499",
-      image: mouse
+      name: "Laptop Backpack",
+      price: "₹1,299",
+      image: backpack,
+      category: "Accessories"
     }
   ];
 
   return (
-    <div className="container">
-      <header className="hero">
-        <h1>E-Commerce PWA Store</h1>
-        <p>Smart Shopping for Modern Users</p>
+    <div className="app">
+      {/* Navbar */}
+      <header className="navbar">
+        <div className="logo">ShopEasy</div>
+        <nav>
+          <a href="/">Home</a>
+          <a href="/">Products</a>
+          <a href="/">Offers</a>
+          <a href="/">Contact</a>
+        </nav>
       </header>
 
-      <div className="product-grid">
-        {products.map((product) => (
-          <div className="card" key={product.id}>
-            <img
-              src={product.image}
-              alt={product.name}
-              className="product-image"
-            />
-            <h2>{product.name}</h2>
-            <p className="price">{product.price}</p>
-            <button>Add to Cart</button>
-          </div>
-        ))}
-      </div>
+      {/* Hero Section */}
+      <section className="hero">
+        <div className="hero-content">
+          <h1>Discover Amazing Products</h1>
+          <p>Shop the latest gadgets, fashion, and accessories at unbeatable prices.</p>
+          <button className="shop-btn">Shop Now</button>
+        </div>
+      </section>
+
+      {/* Featured Products */}
+      <section className="products">
+        <h2>Featured Products</h2>
+        <p className="subtitle">Top picks for you</p>
+
+        <div className="product-grid">
+          {products.map((product) => (
+            <div className="card" key={product.id}>
+              <div className="image-container">
+                <img src={product.image} alt={product.name} />
+              </div>
+
+              <div className="card-content">
+                <span className="category">{product.category}</span>
+                <h3>{product.name}</h3>
+                <p className="price">{product.price}</p>
+
+                <div className="buttons">
+                  <button className="cart-btn">Add to Cart</button>
+                  <button className="buy-btn">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Offer Banner */}
+      <section className="offer">
+        <h2>Special Offer</h2>
+        <p>Get up to 50% OFF on selected items!</p>
+      </section>
+
+      {/* Footer */}
+      <footer className="footer">
+        <p>© 2026 ShopEasy | Designed for Smart Shopping</p>
+      </footer>
     </div>
   );
 }

@@ -1,86 +1,257 @@
+/* App.css */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f7fc;
+  background-color: #fff8f2;
 }
 
-.container {
-  padding: 30px;
+.app {
+  width: 100%;
+  min-height: 100vh;
 }
 
-.hero {
-  text-align: center;
-  background: linear-gradient(to right, #1e3c72, #2a5298);
+/* NAVBAR */
+.navbar {
+  width: 100%;
+  background: #3b1f2b;
   color: white;
-  padding: 40px;
-  border-radius: 15px;
-  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  position: sticky;
+  top: 0;
 }
 
-.hero h1 {
-  font-size: 38px;
-  margin-bottom: 10px;
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffb703;
 }
 
-.hero p {
-  font-size: 18px;
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.navbar nav {
+  display: flex;
   gap: 25px;
 }
 
+.navbar nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.navbar nav a:hover {
+  color: #ffb703;
+}
+
+/* HERO SECTION */
+.hero {
+  width: 100%;
+  height: 70vh;
+  background: linear-gradient(to right, #6a040f, #d00000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 52px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.shop-btn {
+  padding: 14px 30px;
+  font-size: 18px;
+  border: none;
+  background: #ffb703;
+  color: black;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.shop-btn:hover {
+  background: white;
+}
+
+/* PRODUCTS SECTION */
+.products {
+  width: 100%;
+  padding: 60px 8%;
+  text-align: center;
+}
+
+.products h2 {
+  font-size: 40px;
+  color: #3b1f2b;
+}
+
+.subtitle {
+  color: #666;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+
+/* PRODUCT GRID */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+/* PRODUCT CARD */
 .card {
   background: white;
   border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   transition: 0.3s;
-  text-align: center;
 }
 
 .card:hover {
   transform: translateY(-8px);
 }
 
-.product-image {
+.image-container {
   width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 12px;
+  height: 250px;
+  background: #fff3e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.card h2 {
-  margin: 15px 0 10px;
-  font-size: 20px;
-  color: #222;
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.category {
+  color: #d00000;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.card-content h3 {
+  font-size: 22px;
+  margin: 10px 0;
+  color: #3b1f2b;
 }
 
 .price {
-  font-size: 18px;
-  color: #2a5298;
+  font-size: 24px;
+  color: #2a9d8f;
   font-weight: bold;
   margin-bottom: 15px;
 }
 
-button {
-  background: #2a5298;
-  color: white;
+/* BUTTONS */
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.cart-btn,
+.buy-btn {
+  flex: 1;
+  padding: 12px;
   border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
   cursor: pointer;
-  font-size: 15px;
+  border-radius: 8px;
+  font-size: 16px;
   transition: 0.3s;
 }
 
-button:hover {
-  background: #1e3c72;
+.cart-btn {
+  background: #3b1f2b;
+  color: white;
+}
+
+.cart-btn:hover {
+  background: #6a040f;
+}
+
+.buy-btn {
+  background: #ffb703;
+  color: black;
+}
+
+.buy-btn:hover {
+  background: #d00000;
+  color: white;
+}
+
+/* OFFER SECTION */
+.offer {
+  margin: 50px 8%;
+  background: linear-gradient(to right, #d00000, #ffb703);
+  color: white;
+  text-align: center;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+.offer h2 {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.offer p {
+  font-size: 20px;
+}
+
+/* FOOTER */
+.footer {
+  width: 100%;
+  background: #3b1f2b;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
 }
