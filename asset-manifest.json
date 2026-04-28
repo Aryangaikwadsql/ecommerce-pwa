@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/ecommerce-pwa/static/css/main.bf9f5856.css",
-    "main.js": "/ecommerce-pwa/static/js/main.48c2e16f.js",
+    "main.css": "/ecommerce-pwa/static/css/main.70a698d6.css",
+    "main.js": "/ecommerce-pwa/static/js/main.2684ed52.js",
     "static/js/453.89b5cfb6.chunk.js": "/ecommerce-pwa/static/js/453.89b5cfb6.chunk.js",
     "static/media/headphones.jpg": "/ecommerce-pwa/static/media/headphones.9122dbe70ca92c124cbd.jpg",
     "index.html": "/ecommerce-pwa/index.html",
-    "main.bf9f5856.css.map": "/ecommerce-pwa/static/css/main.bf9f5856.css.map",
-    "main.48c2e16f.js.map": "/ecommerce-pwa/static/js/main.48c2e16f.js.map",
+    "main.70a698d6.css.map": "/ecommerce-pwa/static/css/main.70a698d6.css.map",
+    "main.2684ed52.js.map": "/ecommerce-pwa/static/js/main.2684ed52.js.map",
     "453.89b5cfb6.chunk.js.map": "/ecommerce-pwa/static/js/453.89b5cfb6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bf9f5856.css",
-    "static/js/main.48c2e16f.js"
+    "static/css/main.70a698d6.css",
+    "static/js/main.2684ed52.js"
   ]
 }
